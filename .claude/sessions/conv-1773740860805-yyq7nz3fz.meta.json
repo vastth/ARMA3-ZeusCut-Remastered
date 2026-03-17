@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773740860805-yyq7nz3fz",
+  "title": "规划 Templater+QuickAdd 库升级方案",
+  "titleGenerationStatus": "success",
+  "createdAt": 1773740860806,
+  "updatedAt": 1773741332811,
+  "lastResponseAt": 1773741332811,
+  "sessionId": "23aa2313-5c76-4440-9c1b-653b7fa09230",
+  "sdkSessionId": "23aa2313-5c76-4440-9c1b-653b7fa09230",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 1011,
+    "cacheReadInputTokens": 27295,
+    "contextWindow": 200000,
+    "contextTokens": 28307,
+    "percentage": 14
+  }
+}
