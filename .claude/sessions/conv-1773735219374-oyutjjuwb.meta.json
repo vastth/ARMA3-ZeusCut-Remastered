@@ -1,0 +1,390 @@
+{
+  "id": "conv-1773735219374-oyutjjuwb",
+  "title": "Integrate Dataview and Kanban plugins",
+  "titleGenerationStatus": "success",
+  "createdAt": 1773735219374,
+  "updatedAt": 1773735728622,
+  "lastResponseAt": 1773735728622,
+  "sessionId": "e3a56505-eda4-4da1-80ab-f6a7c7b545e3",
+  "sdkSessionId": "e3a56505-eda4-4da1-80ab-f6a7c7b545e3",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 530,
+    "cacheReadInputTokens": 14819,
+    "contextWindow": 200000,
+    "contextTokens": 15352,
+    "percentage": 8
+  },
+  "subagentData": {
+    "toolu_01VZBz7jBsyFZnp2JAFvpNKP": {
+      "id": "toolu_01VZBz7jBsyFZnp2JAFvpNKP",
+      "description": "探索库结构",
+      "prompt": "请全面探索这个 Obsidian vault 的结构，我需要了解：\n1. 每一层（L0-L6）的文件列表和主要文件名\n2. L5_场次工作区 的详细结构（场次文件夹、文件命名规律）\n3. 任意一个场次文件夹里有哪些文件\n4. L0_导演作战台 里有哪些文件\n5. L2_当前状态层 里有哪些文件\n6. 任意一个 .md 文件的 frontmatter 结构示例（tags、status等字段）\n\n请用 Glob 和 Read 工具，尽量详细。vault根目录就是当前工作目录。",
+      "status": "completed",
+      "toolCalls": [
+        {
+          "id": "toolu_018b4hrog8Uonhp3V1w8LwWT",
+          "name": "Glob",
+          "input": {
+            "pattern": "L*"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "D:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\LICENSE"
+        },
+        {
+          "id": "toolu_019m5p4aTHfgafqD22zgrE1a",
+          "name": "Bash",
+          "input": {
+            "command": "find /d/Obsidian\\ Vault/ARMA3-ZeusCut-Remastered -maxdepth 1 -type d | sort",
+            "description": "List all top-level directories to understand L-layer structure"
+          },
+          "status": "blocked",
+          "isExpanded": false,
+          "result": "Access denied: Command path \"/d/Obsidian\\\" is outside the vault. Agent is restricted to vault directory only."
+        },
+        {
+          "id": "toolu_01Bxqg4iEWVaPQHdNoRmayWP",
+          "name": "Glob",
+          "input": {
+            "pattern": "L*"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "D:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\LICENSE"
+        },
+        {
+          "id": "toolu_016x8h3DgSAZ26B3AGacWEwk",
+          "name": "Glob",
+          "input": {
+            "pattern": "*"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "D:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\.claude-plugin\\marketplace.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\.claude-plugin\\plugin.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\LICENSE\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\README.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\defuddle\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\json-canvas\\references\\EXAMPLES.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\json-canvas\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-bases\\references\\FUNCTIONS_REFERENCE.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-bases\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-cli\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-markdown\\references\\CALLOUTS.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-markdown\\references\\EMBEDS.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-markdown\\references\\PROPERTIES.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\obsidian-markdown\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian-excalidraw-plugin\\manifest.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian-excalidraw-plugin\\main.js\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian-excalidraw-plugin\\styles.css\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\copilot\\manifest.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\copilot\\main.js\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\copilot\\styles.css\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\copilot\\data.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian-excalidraw-plugin\\data.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773304553551-qyho4scti.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773410436375-mea6yjn3w.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773413426876-yd247s73v.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773413536689-m67155iwa.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773414232241-757qxy7bx.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773418527530-zbq7asvk0.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\claudian\\styles.css\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\claudian\\manifest.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\claudian\\main.js\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian42-brat\\manifest.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian42-brat\\main.js\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian42-brat\\styles.css\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian42-brat\\brat-migrations.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\plugins\\obsidian42-brat\\data.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773420007992-bby5kf9l4.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773421790447-jn4rpjpgd.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\导演手册.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\单场剧本卡模板.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\转折库.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\失败分支方案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\Pasted image 20260314090931.png\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L6_差异学习层\\导演技巧抽象.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L6_差异学习层\\差异案例\\差异案例索引.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\剃刀帮档案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\情报文件.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\AI提示词库.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L4_内容生产层\\休眠伏笔.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773497398957-vz7odrcur.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773496158321-yavhh03zs.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773422277352-rscfs4s6g.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\伏笔档案可视化.canvas\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\工作流可视化.canvas\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773539707905-gx8f1815a.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\活动任务.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\仲裁材料索引.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\完整版剧情脚本.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\bookmarks.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\workspaces.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\skills\\arma3-sync-audit\\SKILL.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.obsidian\\graph.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773556787465-cgxfjraj4.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\主线支线推进状态.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\地点当前状态.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\组织关系当前状态.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\未决事项.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773578604288-anfypgqg1.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\sessions\\conv-1773581914691-9obkvhfay.meta.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\原始仲裁材料\\_说明.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\_模板_直播偏差记录.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\S1\\S1-1\\直播偏差记录.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\_模板_单场摘要.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\_模板_状态变更单.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\_模板_导演复盘卡.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\_模板_伏笔推进记录.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\伏笔档案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\地点档案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\01_当前状态索引.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L4_内容生产层\\已回收伏笔归档.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L6_差异学习层\\成功模式库.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L6_差异学习层\\失败模式库.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\00_导演控制台.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L4_内容生产层\\阶段压缩\\阶段压缩目录.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\时间线.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\势力档案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L4_内容生产层\\全局伏笔总表.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\S1\\S1-1\\状态变更单.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\S1\\S1-1\\伏笔推进记录.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\S1\\S1-1\\S1-1：《换皮》.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\资源当前状态.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\人物档案.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\02_本场任务入口.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L0_导演作战台\\03_下一场候选推进.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L1_事实层\\世界规则.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L3_方法论层\\状态同步规范.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\.claude\\claudian-settings.json\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L2_当前状态层\\人物当前状态.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L5_场次工作区\\S1\\S1-1\\单场摘要.md\nD:\\Obsidian Vault\\ARMA3-ZeusCut-Remastered\\L4_内容生产层\\活跃伏笔.md\n(Results are truncated. Consider using a more specific path or pattern.)"
+        },
+        {
+          "id": "toolu_015rMMaFG94UTp79u5YX9vu5",
+          "name": "Bash",
+          "input": {
+            "command": "find . -maxdepth 1 -type d -name \"L*\" | sort",
+            "description": "List all L-layer directories in current vault"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "./L0_导演作战台\n./L1_事实层\n./L2_当前状态层\n./L3_方法论层\n./L4_内容生产层\n./L5_场次工作区\n./L6_差异学习层"
+        },
+        {
+          "id": "toolu_01EnQBZru8LWyUHL9XxeMMJj",
+          "name": "Bash",
+          "input": {
+            "command": "ls -la L5_场次工作区/ | head -30",
+            "description": "List contents of L5 layer directory"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "total 28\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 15:46 .\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 16:04 ..\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 16:08 S1\n-rw-r--r-- 1 Administrator 197121 1381 Mar 16 22:41 _模板_伏笔推进记录.md\n-rw-r--r-- 1 Administrator 197121 1262 Mar 16 22:30 _模板_单场摘要.md\n-rw-r--r-- 1 Administrator 197121 1408 Mar 16 22:41 _模板_导演复盘卡.md\n-rw-r--r-- 1 Administrator 197121 1526 Mar 16 22:41 _模板_状态变更单.md\n-rw-r--r-- 1 Administrator 197121 1388 Mar 16 22:29 _模板_直播偏差记录.md\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 15:46 原始仲裁材料"
+        },
+        {
+          "id": "toolu_01QfHJvfhG1w1mvsS6nxYqUi",
+          "name": "Bash",
+          "input": {
+            "command": "find L5_场次工作区 -type d | sort",
+            "description": "Show directory structure of L5"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L5_场次工作区\nL5_场次工作区/S1\nL5_场次工作区/S1/S1-1\nL5_场次工作区/S1/S1-2\nL5_场次工作区/原始仲裁材料"
+        },
+        {
+          "id": "toolu_0137Q8MHTGvgs8bQ4k1cFE7Y",
+          "name": "Bash",
+          "input": {
+            "command": "find L5_场次工作区/S1 -type f -name \"*.md\" | sort",
+            "description": "List all markdown files in S1 series"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L5_场次工作区/S1/S1-1/S1-1：《换皮》.md\nL5_场次工作区/S1/S1-1/伏笔推进记录.md\nL5_场次工作区/S1/S1-1/单场摘要.md\nL5_场次工作区/S1/S1-1/导演复盘卡.md\nL5_场次工作区/S1/S1-1/状态变更单.md\nL5_场次工作区/S1/S1-1/直播偏差记录.md\nL5_场次工作区/S1/S1-2/S1-2：《投名状》.md\nL5_场次工作区/S1/S1-2/伏笔推进记录.md\nL5_场次工作区/S1/S1-2/单场摘要.md\nL5_场次工作区/S1/S1-2/导演复盘卡.md\nL5_场次工作区/S1/S1-2/状态变更单.md\nL5_场次工作区/S1/S1-2/直播偏差记录.md"
+        },
+        {
+          "id": "toolu_018ho9qt4ukWScjDBAKTC1Tp",
+          "name": "Bash",
+          "input": {
+            "command": "ls -la L0_导演作战台/",
+            "description": "List files in L0 layer"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "total 352\ndrwxr-xr-x 1 Administrator 197121      0 Mar 17 15:46 .\ndrwxr-xr-x 1 Administrator 197121      0 Mar 17 16:04 ..\n-rw-r--r-- 1 Administrator 197121   1076 Mar 16 23:06 00_导演控制台.md\n-rw-r--r-- 1 Administrator 197121   2100 Mar 16 22:46 01_当前状态索引.md\n-rw-r--r-- 1 Administrator 197121   1200 Mar 16 23:15 02_本场任务入口.md\n-rw-r--r-- 1 Administrator 197121   1380 Mar 16 23:15 03_下一场候选推进.md\n-rw-r--r-- 1 Administrator 197121 326140 Mar 14 09:09 Pasted image 20260314090931.png\n-rw-r--r-- 1 Administrator 197121   5500 Mar 15 10:23 工作流可视化.canvas"
+        },
+        {
+          "id": "toolu_015cYET4Vmp3UpUCo56h8oUu",
+          "name": "Bash",
+          "input": {
+            "command": "ls -la L2_当前状态层/",
+            "description": "List files in L2 layer"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "total 28\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 15:46 .\ndrwxr-xr-x 1 Administrator 197121    0 Mar 17 16:04 ..\n-rw-r--r-- 1 Administrator 197121 1136 Mar 15 20:53 主线支线推进状态.md\n-rw-r--r-- 1 Administrator 197121 1501 Mar 17 15:21 人物当前状态.md\n-rw-r--r-- 1 Administrator 197121  816 Mar 15 20:54 地点当前状态.md\n-rw-r--r-- 1 Administrator 197121 1091 Mar 15 20:55 未决事项.md\n-rw-r--r-- 1 Administrator 197121 1061 Mar 15 20:54 组织关系当前状态.md\n-rw-r--r-- 1 Administrator 197121 1101 Mar 16 23:15 资源当前状态.md"
+        },
+        {
+          "id": "toolu_01CTJtYoiKiKjrDEguUkW1hL",
+          "name": "Bash",
+          "input": {
+            "command": "find ./L* -maxdepth 1 -type f -name \"*.md\" | sort",
+            "description": "List all L-layer top-level markdown files"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "./L0_导演作战台/00_导演控制台.md\n./L0_导演作战台/01_当前状态索引.md\n./L0_导演作战台/02_本场任务入口.md\n./L0_导演作战台/03_下一场候选推进.md\n./L1_事实层/世界规则.md\n./L1_事实层/人物档案.md\n./L1_事实层/伏笔档案.md\n./L1_事实层/势力档案.md\n./L1_事实层/地点档案.md\n./L1_事实层/时间线.md\n./L2_当前状态层/主线支线推进状态.md\n./L2_当前状态层/人物当前状态.md\n./L2_当前状态层/地点当前状态.md\n./L2_当前状态层/未决事项.md\n./L2_当前状态层/组织关系当前状态.md\n./L2_当前状态层/资源当前状态.md\n./L3_方法论层/AI提示词库.md\n./L3_方法论层/单场剧本卡模板.md\n./L3_方法论层/失败分支方案.md\n./L3_方法论层/导演手册.md\n./L3_方法论层/导演速查手册.md\n./L3_方法论层/状态同步规范.md\n./L3_方法论层/转折库.md\n./L4_内容生产层/休眠伏笔.md\n./L4_内容生产层/全局伏笔总表.md\n./L4_内容生产层/已回收伏笔归档.md\n./L4_内容生产层/活跃伏笔.md\n./L5_场次工作区/_模板_伏笔推进记录.md\n./L5_场次工作区/_模板_单场摘要.md\n./L5_场次工作区/_模板_导演复盘卡.md\n./L5_场次工作区/_模板_状态变更单.md\n./L5_场次工作区/_模板_直播偏差记录.md\n./L6_差异学习层/失败模式库.md\n./L6_差异学习层/导演技巧抽象.md\n./L6_差异学习层/成功模式库.md"
+        },
+        {
+          "id": "toolu_01Rvvxhs9zhRpBfL2HzHMMMN",
+          "name": "Bash",
+          "input": {
+            "command": "ls L1_事实层/ && echo \"---\" && ls L3_方法论层/ && echo \"---\" && ls L4_内容生产层/ && echo \"---\" && ls L6_差异学习层/",
+            "description": "List all files in L1, L3, L4, L6 layers"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "世界规则.md\n人物档案.md\n伏笔档案.md\n伏笔档案可视化.canvas\n势力档案.md\n地点档案.md\n时间线.md\n---\nAI提示词库.md\n单场剧本卡模板.md\n失败分支方案.md\n导演手册.md\n导演速查手册.md\n状态同步规范.md\n转折库.md\n---\n休眠伏笔.md\n全局伏笔总表.md\n已回收伏笔归档.md\n活跃伏笔.md\n阶段压缩\n---\n失败模式库.md\n导演技巧抽象.md\n差异案例\n成功模式库.md"
+        },
+        {
+          "id": "toolu_01Xrbm7MhkJMBFwASETRHxxB",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/S1/S1-1/S1-1：《换皮》.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L5_场次工作区\n     3→type: 单场剧本\n     4→场次: S1-1\n     5→标题: 《换皮》\n     6→执行状态: 规划中\n     7→last_updated: 2026-03-16\n     8→---\n     9→\n    10→#### **第一幕：基地苏醒**\n    11→- **开场**：在俄军基地醒来，换上军队装备，准备去执行任务\n    12→- 氛围：军事、压抑、神秘感\n    13→- 在基地听到其他士兵议论A岛局势（民主党vs共和党）了解世界观\n    14→- lala 视察，简短对话，透露\"有新任务\"\n    15→- 这一幕是\"身份转换\"的序幕——从普通特种兵到卧底特务的心理准备。\n    16→#### **第二幕：任务简报与离开基地**\n    17→\n    18→##### **lala的任务简报**\n    19→- **地点**：lala的指挥室\n    20→- **核心内容**：lala正式下达卧底任务\n    21→    - 目标：打入剃刀党，调查大当家奥利弗的真实身份和背景\n    22→    - **关键点**：俄军与剃刀党没有任何联系，这是完全的卧底渗透\n    23→- **关键信息透露**：\n    24→    - A岛三大势力格局（民主党、共和党、剃刀党）\n    25→    - 俄军的中立立场与《阿尔蒂斯冷战协议》\n    26→    - 为什么要调查奥利弗（暗示他可能与某个大国有联系，或掌握某个秘密）\n    27→    - 超哥需要自己在A岛建立人脉网络，俄军只能在关键时刻提供支援\n    28→- **重要设定**：\n    29→    - 超哥需要找到一个\"入口\"进入剃刀党（这将成为第三幕的核心）\n    30→    - lala给超哥一个紧急联系方式（只能在关键时刻使用）\n    31→    - 超哥需要自己建立情报网络（地狱猫、阿南等后续结识）\n    32→\n    33→##### **lala的关键建议**\n    34→- **情报来源**：lala建议超哥去当地黑市刺探情报\n    35→- **理由**：黑市掌握A岛的人脉和秘密，是打入剃刀党的最快途径\n    36→- **首要目标**：想办法加入剃刀党，不择手段\n    37→\n    38→##### **离开基地**\n    39→- 超哥接受任务，准备装备\n    40→- **身份转换**：超哥决定在A岛卧底时改名为\"小蛋\"（更容易融入黑道圈子）\n    41→- 超哥/小蛋离开俄军基地，前往A岛黑市\n    42→#### **第三幕：从0开始**\n    43→\n    44→**背景**：离开基地后，超哥需要自力更生，通过黑市情报网络打入剃刀党。这一幕是\"积累资本\"的过程。\n    45→\n    46→---\n    47→\n    48→##### **场景1：路遇打劫**\n    49→- **地点**：前往黑市的路上\n    50→- **事件**：遇到骷髅帮正在打劫一个平民（爱马仕）的改装货车\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01Sn5HpzgHYVQviQK1iTyv8j",
+          "name": "Read",
+          "input": {
+            "file_path": "L2_当前状态层/人物当前状态.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L2_当前状态层\n     3→type: 人物当前状态\n     4→last_synced: 重制版S1前\n     5→---\n     6→\n     7→# 人物当前状态\n     8→\n     9→> 只记录当前有效状态，不保留过期状态。历史变化见 [[L5_场次工作区/S1/S1-1/状态变更单]] 等各场状态变更单。\n    10→\n    11→---\n    12→\n    13→## 主角团\n    14→\n    15→| 人物 | 当前状态 | 位置 | 可用性 | 视角 |\n    16→|------|---------|------|--------|------|\n    17→| 小蛋 | 俄军特种部队成员，尚未接受卧底任务 | 俄军A岛辖区（俄军营地） | ✅ | [已知] |\n    18→\n    19→## 核心支援 NPC\n    20→\n    21→| 人物       | 当前状态                | 位置    | 可用性     | 视角   |\n    22→| -------- | ------------------- | ----- | ------- | ---- |\n    23→| lala     | 活跃，小蛋的直属上司，即将下达卧底任务 | 俄军基地  | ✅ 可联系   | [已知] |\n    24→| 史哥       | 活跃，剃刀党三号人物（小蛋尚未结识）  | 剃刀党地盘 | ⚠️ 尚未结识 | [未知] |\n    25→| 奥利弗（大当家） | 活跃，剃刀党最高领袖（小蛋的情报目标） | 不明    | ⚠️ 情报目标 | [未知] |\n    26→| 阿K       | 活跃，修车厂老板            | 修车厂   | ⚠️ 尚未结识 | [已知] |\n    27→| 地狱猫      | 活跃，顶级黑客             | 不明    | ⚠️ 尚未结识 | [已知] |\n    28→\n    29→## 敌对NPC\n    30→\n    31→| 人物 | 当前状态 | 位置 | 视角 |\n    32→|------|---------|------|------|\n    33→| 约翰·谢尔比（二当家） | 活跃，剃刀党二号人物 | 剃刀党地盘 | [未知] |\n    34→| 切尔西 | 活跃，剃刀党中层 | 剃刀党地盘 | [未知] |\n    35→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_012UbYd5Wr9iw32rbgXAErTZ",
+          "name": "Read",
+          "input": {
+            "file_path": "L1_事实层/人物档案.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L1_事实层\n     3→type: 人物档案\n     4→last_updated: 2026-03-15\n     5→source: 完整版剧情脚本（重制版）\n     6→---\n     7→\n     8→# 人物档案\n     9→\n    10→> 稳定事实源。只记录已确认的角色信息，不记录临时状态。\n    11→> 临时状态（当前位置/当前任务/关系变化）→ 写入 [[L2_当前状态层/人物当前状态]]\n    12→\n    13→---\n    14→\n    15→## 主角团\n    16→\n    17→### 小蛋（CG / 超哥）\n    18→- 身份：主角，来自缅甸的华人\n    19→- 真实背景：原俄罗斯特种部队成员，lala（少校）的下属，受命以\"CG/超哥\"身份卧底A岛剃刀帮\n    20→- 定位：俄军特种部队成员（当前），即将以卧底身份打入剃刀帮\n    21→- 发展轨迹：俄军特种兵 → 卧底剃刀帮 → 史哥干将 → 西部领袖 → 政治渗透 → 出海东南亚（剧情脚本参考）\n    22→- 关键特质：机智、谋略、领导力强\n    23→- 当前状态：俄军A岛辖区，尚未接受卧底任务（重制版起点）\n    24→\n    25→---\n    26→\n    27→## 核心支援 NPC\n    28→\n    29→### 史哥（SZX / 史珍香）\n    30→- 身份：剃刀党三号人物\n    31→- 电话：— （通过基地联系）\n    32→- 功能：内线盟友、情报、基地复活点、主线任务发布\n    33→- 关键特质：正直、讲江湖道义、深受手下爱戴\n    34→- 状态：活跃（重制版起点，尚未牺牲）\n    35→- 备注：剧情脚本中将在S2末牺牲，重制版从头开始\n    36→\n    37→### 奥利弗（大当家）\n    38→- 身份：剃刀党最高领袖\n    39→- 电话：— （极少直接联系）\n    40→- 功能：关键时刻化解危机、制衡二当家\n    41→- 关键特质：神秘、低调、军人出身\n    42→- 状态：活跃（重制版起点，身份神秘，是小蛋卧底任务的首要情报目标）\n    43→\n    44→### 阿K（老K / 修车厂师傅）\n    45→- 身份：修车厂老板，剃刀党外围\n    46→- 电话：051-1213\n    47→- 英文代号：Mr.Z\n    48→- 功能：车辆、船只、装备补给、后勤支援\n    49→- 状态：活跃（重制版起点，尚未牺牲）\n    50→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_014L1FWk4W9r2MVkp9eFnqBj",
+          "name": "Read",
+          "input": {
+            "file_path": "L0_导演作战台/00_导演控制台.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L0\n     3→type: 导演控制台\n     4→last_updated: 2026-03-14\n     5→---\n     6→\n     7→# 00 导演控制台\n     8→\n     9→> 每次开工第一眼。只看这一页，就知道现在在哪、下一步做什么。\n    10→\n    11→---\n    12→\n    13→## 当前位置\n    14→\n    15→**季度**：重制版第一季 · 换皮入局\n    16→**当前场次**：S1-1《换皮》规划中，尚未直播\n    17→**最后同步**：2026-03-16\n    18→\n    19→> 📌 原始仲裁材料为剧情参考本 → [[L5_场次工作区/原始仲裁材料/_说明]]\n    20→\n    21→---\n    22→\n    23→## 最紧急的3件事\n    24→\n    25→| 优先级  | 事项      | 截止   | 状态   |\n    26→| ---- | ------- | ---- | ---- |\n    27→| 🔴 1 | S1-1《换皮》剧本确认并准备直播 | 本周 | 规划中 |\n    28→| 🟡 2 | 统一伏笔ID体系（S1-F-XXX格式） | 本周 | 待处理 |\n    29→| 🔵 3 | L2状态层同步S1-1内容 | 直播后 | 待处理 |\n    30→\n    31→---\n    32→\n    33→## 快速导航\n    34→\n    35→- 当前状态全貌 → [[L0_导演作战台/01_当前状态索引]]\n    36→- 本场任务入口 → [[L0_导演作战台/02_本场任务入口]]\n    37→- 下一场候选方向 → [[L0_导演作战台/03_下一场候选推进]]\n    38→- 全局伏笔总表 → [[L4_内容生产层/全局伏笔总表]]\n    39→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01WydYek2JRxUHugKLmm8d1v",
+          "name": "Bash",
+          "input": {
+            "command": "find L5_场次工作区/S1/S1-1 -type f -name \"*.md\"",
+            "description": "List all markdown files in S1-1 subfolder"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L5_场次工作区/S1/S1-1/S1-1：《换皮》.md\nL5_场次工作区/S1/S1-1/伏笔推进记录.md\nL5_场次工作区/S1/S1-1/单场摘要.md\nL5_场次工作区/S1/S1-1/导演复盘卡.md\nL5_场次工作区/S1/S1-1/状态变更单.md\nL5_场次工作区/S1/S1-1/直播偏差记录.md"
+        },
+        {
+          "id": "toolu_01UJuRnSwfZvexkroS8fXy4N",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/S1/S1-1/单场摘要.md",
+            "limit": 40
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→场次: S1-1\n     3→标题: 《换皮》\n     4→时间线位置: 故事开始，超哥接受卧底任务后的第一天\n     5→来源脚本: \"[[L5_场次工作区/S1/S1-1/S1-1：《换皮》]]\"\n     6→执行状态: 规划中\n     7→直播日期:\n     8→偏差记录: \"[[L5_场次工作区/S1/S1-1/直播偏差记录]]\"\n     9→---\n    10→\n    11→## 本场开场冻结快照\n    12→\n    13→- **当前任务目标**：打入剃刀党，调查大当家奥利弗的真实身份和背景\n    14→- **人物关键状态**：\n    15→  - 超哥/小蛋：俄军特种兵，卧底时改名为\"小蛋\"，刚接受卧底任务，身份转换中\n    16→  - lala：俄军指挥官，给予任务和紧急联系方式\n    17→  - 爱马仕：平民，货车改装商（待结识）\n    18→  - 皮特：黑市老板（待结识）\n    19→  - 老白：白糖师，被非法关押（待救出）\n    20→- **地点关键状态**：\n    21→  - 俄军基地：出发点\n    22→  - A岛黑市：情报来源地\n    23→  - XXX-XXX地区：老白被关押地\n    24→- **活跃伏笔**：\n    25→  - S1-F-001：奥利弗的真实身份和背景\n    26→  - S1-F-002：剃刀党的真实目的\n    27→  - S1-F-003：俄军为什么要调查剃刀党\n    28→- **信息边界**：\n    29→  - [已知]：A岛三大势力格局、俄军中立立场、需要打入剃刀党\n    30→  - [未知]：剃刀党总部位置、奥利弗的秘密、黑市人脉\n    31→  - [推演]：黑市可能掌握关键情报\n    32→\n    33→---\n    34→\n    35→## 本场事件流（按阶段）\n    36→\n    37→### 第一幕：基地苏醒\n    38→- **身份转换**：超哥在俄军基地醒来，换上军队装备，听士兵议论A岛局势\n    39→- **任务下达**：lala视察，透露有新任务，氛围压抑神秘\n    40→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01UyLwy5WCK2EXngf3jiQMzX",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/S1/S1-2/S1-2：《投名状》.md",
+            "limit": 40
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L5_场次工作区\n     3→type: 单场剧本\n     4→场次: S1-2\n     5→标题: 《投名状》\n     6→执行状态: 规划中\n     7→last_updated: 2026-03-17\n     8→---\n     9→\n    10→#### **第一幕：带刀登门**\n    11→\n    12→- **开场**：天刚亮，A岛的晨雾还没散。小蛋把昨夜骷髅帮的几具尸体——或者他们的证件、臂章、武器——打包装车，这是他唯一的敲门砖。没有引荐人，没有背景，只有一堆证明\"我干掉了你们死对头\"的东西。\n    13→- **地点**：从临时据点出发 → 前往剃刀党总部（皮特审问中得到的坐标）\n    14→- **氛围**：昨晚才跟一个黑市老板翻脸，今天就要去投奔他的上家，这种荒诞感小蛋心里清楚。\n    15→\n    16→---\n    17→\n    18→**路上的准备**\n    19→- 小蛋独自整理装备，做最后的身份切换心理建设\n    20→- **关键选择**：带几具尸体去？\n    21→  - ✅ 带完整证据（骷髅帮臂章 + 武器）→ 更有说服力，但目标更明显\n    22→  - 只带武器 → 低调，但投名状分量不够\n    23→- **老白问题**（如果上场救出了老白）：老白怎么安置？\n    24→  - ✅ 让老白先躲在爱马仕那边 → 暂时安全，留下后手\n    25→  - 带着老白同去 → 风险极大，暂不推荐\n    26→\n    27→---\n    28→\n    29→#### **第二幕：总部初入**\n    30→\n    31→##### **场景1：门口的史哥**\n    32→\n    33→- **地点**：剃刀党总部外围（仓库区 / 工业区，防守严密）\n    34→- **事件**：小蛋刚靠近，就被人拦住。拦他的是一个高壮的男人，眼神锐利，不像普通小弟——这是**史哥**，剃刀党三号人物，今天恰好在外围巡视。\n    35→- **关键NPC**：**史哥**（剃刀党三号人物，[未知]，小蛋第一次结识）\n    36→- **初见张力**：\n    37→  - 史哥对陌生人零好感，直接把枪顶上来\n    38→  - 小蛋亮出投名状——骷髅帮的证件和武器\n    39→  - 史哥仔细检查，表情有细微变化：「这帮人是我们的事，你一个外人动手……」\n    40→  - **言下之意**：这个外人要么是个疯子，要么是个能用的人\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01GDN6NQq1a54y3JdeECxjJW",
+          "name": "Bash",
+          "input": {
+            "command": "ls L4_内容生产层/",
+            "description": "List L4 contents"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "休眠伏笔.md\n全局伏笔总表.md\n已回收伏笔归档.md\n活跃伏笔.md\n阶段压缩"
+        },
+        {
+          "id": "toolu_0126zgDbEULFPBKZCfi1Pnvd",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/_模板_导演复盘卡.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L5_场次工作区\n     3→type: 导演复盘卡模板\n     4→粒度: 集级（每集独立，放在 SX/SX-X/ 文件夹内）\n     5→用途: 本集设计决策记录 + 踩坑点，供下一集编写时参考\n     6→---\n     7→\n     8→# 导演复盘卡模板\n     9→\n    10→> 复制到 L5_场次工作区/SXXX/ 使用。\n    11→> 职责：只沉淀导演经验。不写事件叙述，不写状态总表，不写伏笔列表。\n    12→\n    13→---\n    14→\n    15→```\n    16→---\n    17→场次: SXXX\n    18→已同步L6: false\n    19→---\n    20→\n    21→## 本场设计决策记录\n    22→\n    23→| 决策点 | 我的选择 | 备选方案 | 选择理由 |\n    24→|--------|---------|---------|---------|\n    25→| [决策描述] | [实际做法] | [另一种做法] | [为什么这样选] |\n    26→\n    27→## AI续写问题点（本场踩坑）\n    28→\n    29→| 问题描述 | 触发原因 | 修正方式 | 下次预防方法 |\n    30→|---------|---------|---------|------------|\n    31→| [AI写错了什么] | [为什么会错] | [我怎么改的] | [下次怎么避免] |\n    32→\n    33→## 下一场可直接承接的机制/场景\n    34→- [机制名]：[为什么值得复用，怎么用]\n    35→\n    36→## 哪个NPC/场景机制值得复用\n    37→- [NPC/机制]：[复用价值说明]\n    38→\n    39→## 哪个设定已经产生冲突\n    40→- [冲突描述]：[涉及文件] → [建议处理方式]\n    41→\n    42→## 哪个地方容易让AI续写出错\n    43→- [易错点]：[原因] → [给AI的提示词建议]\n    44→\n    45→## L6同步检查\n    46→- [ ] 差异案例已写入 [[L6_差异学习层/差异案例/SXXX_差异记录]]\n    47→- [ ] 可复用模式已提炼到成功模式库或失败模式库\n    48→```\n    49→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01HkHnGUzqr49GAaVBW7sckj",
+          "name": "Bash",
+          "input": {
+            "command": "ls L6_差异学习层/",
+            "description": "List L6 structure"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "失败模式库.md\n导演技巧抽象.md\n差异案例\n成功模式库.md"
+        },
+        {
+          "id": "toolu_01Fi32sgNrH8dtPN8PsMGNu6",
+          "name": "Bash",
+          "input": {
+            "command": "find L4_内容生产层 -type d",
+            "description": "List L4 subdirectories"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L4_内容生产层\nL4_内容生产层/阶段压缩"
+        },
+        {
+          "id": "toolu_01QAkgBP6rYzEgyZA5U5Um3A",
+          "name": "Bash",
+          "input": {
+            "command": "find L6_差异学习层 -type d",
+            "description": "List L6 subdirectories"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L6_差异学习层\nL6_差异学习层/差异案例"
+        },
+        {
+          "id": "toolu_01U69Hucf9GtLyrUxfB2eJpY",
+          "name": "Bash",
+          "input": {
+            "command": "ls L4_内容生产层/阶段压缩/",
+            "description": "List L4 stage compression subdirectory"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "阶段压缩目录.md"
+        },
+        {
+          "id": "toolu_01MpZuWoMU1SoXhHje583uCt",
+          "name": "Bash",
+          "input": {
+            "command": "ls L6_差异学习层/差异案例/",
+            "description": "List L6 case study subdirectory"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "S1-1_差异记录.md\n差异案例索引.md"
+        },
+        {
+          "id": "toolu_016eM8s4wbqG9HccVgS7scXC",
+          "name": "Read",
+          "input": {
+            "file_path": "L3_方法论层/状态同步规范.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L3\n     3→type: 规范文档\n     4→last_updated: 2026-03-16\n     5→---\n     6→\n     7→# 状态同步规范\n     8→\n     9→> 规定何时、由谁、如何将L5场次结果同步到L2当前状态层。\n    10→\n    11→---\n    12→\n    13→## 责任分工\n    14→\n    15→| 时间点 | 导演负责 | AI负责 |\n    16→|--------|---------|--------|\n    17→| 直播前 | 确认单场摘要无误 | — |\n    18→| 直播中 | 记录意外事件（脑子里） | — |\n    19→| 直播后1小时内 | 填写直播偏差记录.md | — |\n    20→| 偏差记录填完后 | 告知AI「帮我回填 SX-X」 | 更新单场摘要、状态变更单、伏笔推进记录 |\n    21→| AI回填完成后 | 确认无误，勾选L2同步检查清单 | 更新L2对应文件（人物/地点/组织/资源/未决事项） |\n    22→\n    23→---\n    24→\n    25→## 同步顺序（AI执行）\n    26→\n    27→1. 读取 `直播偏差记录.md` + `SX-X：《XX》.md`（原始大纲）\n    28→2. 更新 `单场摘要.md`（本场事件流修正为实际发生内容）\n    29→3. 更新 `状态变更单.md`（根据实际发生内容修正变更项）\n    30→4. 更新 `伏笔推进记录.md`（根据实际内容修正伏笔状态）\n    31→5. 根据状态变更单，更新 `L2_当前状态层/` 对应文件：\n    32→   - 人物变更 → `人物当前状态.md`\n    33→   - 地点变更 → `地点当前状态.md`\n    34→   - 组织变更 → `组织关系当前状态.md`\n    35→   - 资源变更 → `资源当前状态.md`\n    36→   - 未决事项 → `未决事项.md`\n    37→   - 主线进度 → `主线支线推进状态.md`\n    38→6. 将状态变更单的同步检查清单全部勾选\n    39→7. 更新 `L4_内容生产层/活跃伏笔.md`（伏笔状态变化）\n    40→8. 更新 `L0_导演作战台/00_导演控制台.md`（当前场次+last_updated）\n    41→9. 提炼本场复盘卡中的「可复用机制」和「AI续写问题点」，生成候选条目写入 `L6_差异学习层/成功模式库.md` 和 `L6_差异学习层/失败模式库.md`，并在模式库末尾标注「待导演评估」\n    42→\n    43→---\n    44→\n    45→## 冲突仲裁原则\n    46→\n    47→当L5场次文件和L2状态层内容矛盾时：\n    48→1. **直播后**：以「直播偏差记录」为最高优先级事实\n    49→2. **规划中**：以「S1-X：《XX》.md」大纲为准\n    50→3. **不确定**：询问导演，不自行判断\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01P57hhvNPF4RH239gSL7xH4",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/原始仲裁材料/_说明.md"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→type: 参考本说明\n     3→状态: 参考本，非事实层\n     4→---\n     5→\n     6→# 原始仲裁材料 — 使用说明\n     7→\n     8→> ⚠️ **这是重制版的「剧情参考本」，不是已发生的事实。**\n     9→\n    10→## 这是什么\n    11→\n    12→原始仲裁材料记录的是原剃刀党系列后80%的完整剧情脚本（前80%记录已丢失，重制版S1正好补上这段空白）。\n    13→\n    14→重制版将以此为**参考框架**，但实际剧情会根据：\n    15→- 导演的即兴创作\n    16→- 主播和粉丝的实际反应\n    17→- ARMA3 ZEUS的现实限制\n    18→\n    19→…产生不同走向。**核心角色和配角只增不减**，但事件发展路径会有差异。\n    20→\n    21→## 使用原则\n    22→\n    23→| 用途 | 是否可用 |\n    24→|------|---------|\n    25→| 了解核心角色的性格弧和最终走向 | ✅ 参考 |\n    26→| 了解世界观中的重要势力关系 | ✅ 参考 |\n    27→| 提取可复用的场景创意和机制 | ✅ 参考 |\n    28→| 直接照搬为重制版已发生事件 | ❌ 不可以 |\n    29→| 作为L1/L2的事实依据 | ❌ 不可以，须经导演确认后才能写入L1 |\n    30→\n    31→---\n    32→\n    33→> 重制版事实层 → [[L1_事实层/人物档案]]\n    34→> 当前剧情进度 → [[L0_导演作战台/00_导演控制台]]\n    35→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01AnbJfxcwschmU3YaBgVMBz",
+          "name": "Read",
+          "input": {
+            "file_path": "L0_导演作战台/02_本场任务入口.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L0\n     3→type: 本场任务入口\n     4→last_updated: 2026-03-16\n     5→---\n     6→\n     7→# 02 本场任务入口\n     8→\n     9→> 当前场次：**S1-1《换皮》**（规划中，尚未直播）\n    10→\n    11→---\n    12→\n    13→## 本场核心目标\n    14→\n    15→- 超哥接受lala的卧底任务，完成身份转换（超哥→小蛋）\n    16→- 在A岛黑市建立初步人脉（爱马仕、皮特）\n    17→- 获取剃刀党总部位置情报\n    18→- 积累初期资金（销赃渠道建立）\n    19→\n    20→---\n    21→\n    22→## 本场剧本入口\n    23→\n    24→- 完整剧本 → [[L5_场次工作区/S1/S1-1/S1-1：《换皮》]]\n    25→- 执行摘要 → [[L5_场次工作区/S1/S1-1/单场摘要]]\n    26→- 活跃伏笔 → [[L4_内容生产层/活跃伏笔]]\n    27→\n    28→---\n    29→\n    30→## 上一场回顾\n    31→\n    32→无（重制版起点）\n    33→\n    34→---\n    35→\n    36→## 本场关键NPC\n    37→\n    38→| NPC | 角色 | 首次出场 |\n    39→|-----|------|---------|\n    40→| lala | 任务下达者、紧急联系人 | 第一幕 |\n    41→| 爱马仕 | 被救平民、后期物资供应商 | 场景1 |\n    42→| 皮特 | 黑市代理老板、反转反派 | 场景2 |\n    43→| 老白 | 白糖师、被关押者 | 场景3 |\n    44→\n    45→---\n    46→\n    47→## 本场承接状态\n    48→\n    49→- **承接自**：重制版起点（俄军基地）\n    50→- **结束后进入**：第二天天亮，前往剃刀党总部\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01FuQWLwTMC1XSUJMwdGhFgk",
+          "name": "Bash",
+          "input": {
+            "command": "find L1_事实层 -type f -name \"*.md\" | sort",
+            "description": "List all L1 markdown files"
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "L1_事实层/世界规则.md\nL1_事实层/人物档案.md\nL1_事实层/伏笔档案.md\nL1_事实层/势力档案.md\nL1_事实层/地点档案.md\nL1_事实层/时间线.md"
+        },
+        {
+          "id": "toolu_01PgPNRzT9c3XDF75EUzqL1w",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/S1/S1-1/伏笔推进记录.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→场次: S1-1\n     3→已同步全局伏笔总表: false\n     4→---\n     5→\n     6→## 本场新增伏笔\n     7→\n     8→| 伏笔ID | 描述 | 视角 | 预计回收时机 | 来源 |\n     9→|--------|------|------|-------------|------|\n    10→| S1-F-001 | 奥利弗的真实身份和背景 | 未知 | S2-S3（主线推进） | S1-第二幕 |\n    11→| S1-F-002 | 俄军为什么要调查剃刀党 | 未知 | S2-S3（主线推进） | S1-第二幕 |\n    12→| S1-F-003 | 剃刀党的真实目的和势力范围 | 未知 | S2-S3（主线推进） | S1-第二幕 |\n    13→| S1-F-004 | 皮特的黑吃黑动机（为什么突然翻脸） | 已知 | S1-场景4（已回收） | S1-场景4 |\n    14→| S1-F-005 | 老白的真实身份和价值 | 已知 | S1-场景3（已回收） | S1-场景3 |\n    15→| S1-F-006 | 骷髅帮和剃刀党的对立关系 | 已知 | S1-场景1（已回收） | S1-场景1 |\n    16→| S1-F-007 | 爱马仕的真实身份（只是改装商吗？） | 未知 | S2-S3（待推进） | S1-场景1 |\n    17→| S1-F-008 | 黑市老板的真实身份（皮特是真老板吗？） | 未知 | S2-S3（待推进） | S1-场景2 |\n    18→| S1-F-009 | 剃刀党总部的防守情况和内部结构 | 未知 | S2（主线推进） | S1-场景4 |\n    19→| S1-F-010 | 超哥的卧底身份会不会暴露 | 未知 | S2-S3（持续悬念） | S1-全场 |\n    20→\n    21→## 本场推进的伏笔\n    22→\n    23→| 伏笔ID | 原描述 | 本场推进内容 | 视角变化 | 当前状态 |\n    24→|--------|--------|-------------|---------|---------|\n    25→| S1-F-004 | 皮特的黑吃黑动机 | 通过场景4的对话和反转，揭示皮特看出超哥有真本事后决定独吞所有收益 | 未知→已知 | 已闭环 |\n    26→| S1-F-005 | 老白的真实身份 | 通过保镖电脑发现老白是白糖师，因欠债被强行关押当\"驴使\" | 未知→已知 | 已闭环 |\n    27→| S1-F-006 | 骷髅帮和剃刀党的对立关系 | 通过超哥（小蛋）的建议和场景1的事件，确认骷髅帮是剃刀党的死对头 | 未知→已知 | 已闭环 |\n    28→\n    29→## 本场回收的伏笔\n    30→\n    31→| 伏笔ID | 原描述 | 回收方式 | 是否完整回收 |\n    32→|--------|--------|---------|------------|\n    33→| S1-F-004 | 皮特的黑吃黑动机 | 通过场景4的对话暴露和反转战斗 | 完整 |\n    34→| S1-F-005 | 老白的真实身份 | 通过保镖电脑的信息获取 | 完整 |\n    35→| S1-F-006 | 骷髅帮和剃刀党的对立关系 | 通过超哥（小蛋）的建议和场景1的事件 | 完整 |\n    36→\n    37→## 需要尽快回收的伏笔（导演标记）\n    38→\n    39→- **S1-F-001**：奥利弗的真实身份 - 这是主线核心伏笔，需要在S2-S3逐步推进，不能拖太久\n    40→- **S1-F-002**：俄军为什么要调查剃刀党 - 这涉及大国政治背景，需要在S2中有所暗示\n    41→- **S1-F-003**：剃刀党的真实目的 - 这是世界观伏笔，需要通过打入剃刀党内部逐步揭示\n    42→- **S1-F-007**：爱马仕的真实身份 - 虽然现在是物资供应商，但可能有更深层身份，建议在S2-S3推进\n    43→- **S1-F-008**：黑市老板的真实身份 - 皮特可能不是真老板，建议在后续场景中推进\n    44→\n    45→## 全局伏笔总表同步\n    46→\n    47→- [ ] 新增伏笔已写入 [[L4_内容生产层/全局伏笔总表]]\n    48→- [ ] 已回收伏笔已在总表标记\n    49→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01RwL6XViKaV3rx1dQo7KjBH",
+          "name": "Read",
+          "input": {
+            "file_path": "L5_场次工作区/S1/S1-1/状态变更单.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→场次: S1-1\n     3→来源脚本章节: 第一幕-第三幕\n     4→已同步L2: false\n     5→---\n     6→\n     7→## 人物状态变更\n     8→\n     9→| 人物 | 变更项 | 变更前 | 变更后 | 视角 | 来源 |\n    10→|------|--------|--------|--------|------|------|\n    11→| 超哥/小蛋 | 身份 | 俄军特种兵（代号：超哥） | 剃刀党卧底（进行中，卧底代号：小蛋） | 已知 | S1-第二幕 |\n    12→| 超哥/小蛋 | 位置 | 俄军基地 | A岛黑市及周边 | 已知 | S1-第三幕 |\n    13→| 超哥/小蛋 | 资金 | 0 | 初步积累（具体数额待补充） | 已知 | S1-场景5 |\n    14→| 超哥/小蛋 | 人脉 | 无 | 爱马仕、皮特（可能已死） | 已知 | S1-场景1/2/4 |\n    15→| lala | 关系 | 上级 | 上级+紧急联系人 | 已知 | S1-第二幕 |\n    16→| 爱马仕 | 身份 | 平民/货车改装商 | 平民/货车改装商/物资供应商 | 已知 | S1-场景1/5 |\n    17→| 爱马仕 | 关系 | 陌生人 | 合作伙伴 | 已知 | S1-场景1/5 |\n    18→| 爱马仕 | 位置 | 黑市路上 | 修车厂（待补充具体位置） | 已知 | S1-场景1 |\n    19→| 皮特 | 身份 | 黑市老板 | 黑市老板/敌人 | 已知 | S1-场景2/4 |\n    20→| 皮特 | 关系 | 陌生人 | 敌对（可能已死） | 已知 | S1-场景4 |\n    21→| 皮特 | 位置 | 黑市 | 被审问地点（待补充） | 已知 | S1-场景4 |\n    22→| 皮特 | 生命状态 | 活跃 | 待定（杀死/放生） | 已知 | S1-场景4 |\n    23→| 老白 | 身份 | 白糖师/被关押者 | 白糖师/被救者 | 已知 | S1-场景3 |\n    24→| 老白 | 位置 | XXX-XXX地区 | 待定（救出/杀死） | 已知 | S1-场景3 |\n    25→| 老白 | 生命状态 | 被关押 | 待定（救出/杀死） | 已知 | S1-场景3 |\n    26→| 骷髅帮成员 | 生命状态 | 活跃 | 已死亡 | 已知 | S1-场景1 |\n    27→\n    28→## 地点状态变更\n    29→\n    30→| 地点 | 变更项 | 变更前 | 变更后 | 视角 | 来源 |\n    31→|------|--------|--------|--------|------|------|\n    32→| 俄军基地 | 超哥状态 | 驻扎 | 已离开 | 已知 | S1-第二幕 |\n    33→| A岛黑市 | 超哥到达 | 未到达 | 已到达 | 已知 | S1-第三幕 |\n    34→| 黑市路上 | 事件 | 无 | 骷髅帮打劫事件 | 已知 | S1-场景1 |\n    35→| XXX-XXX地区 | 事件 | 无 | 营救老白事件 | 已知 | S1-场景3 |\n    36→| XXX-XXX地区 | 保镖状态 | 活跃 | 大部分已死亡 | 已知 | S1-场景3 |\n    37→\n    38→## 组织关系变更\n    39→\n    40→| 组织A | 关系 | 组织B | 变更前 | 变更后 | 视角 | 来源 |\n    41→|-------|------|-------|--------|--------|------|------|\n    42→| 超哥/小蛋 | 从属 | 俄军 | 直接从属 | 卧底身份（隐蔽从属） | 已知 | S1-第二幕 |\n    43→| 超哥/小蛋 | 对立 | 骷髅帮 | 无关系 | 敌对（已消灭） | 已知 | S1-场景1 |\n    44→| 超哥/小蛋 | 对立 | 皮特 | 无关系 | 敌对（可能已死） | 已知 | S1-场景4 |\n    45→| 超哥/小蛋 | 合作 | 爱马仕 | 无关系 | 合作伙伴 | 已知 | S1-场景1/5 |\n    46→| 骷髅帮 | 对立 | 剃刀党 | 敌对 | 敌对（骷髅帮成员已死） | 已知 | S1-场景1 |\n    47→\n    48→## 资源变更\n    49→\n    50→| 资源类型 | 变更前 | 变更后 | 视角 | 来源 |\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        },
+        {
+          "id": "toolu_01LZkJfhYJamLdbJCVWbbLUE",
+          "name": "Read",
+          "input": {
+            "file_path": "L4_内容生产层/活跃伏笔.md",
+            "limit": 50
+          },
+          "status": "completed",
+          "isExpanded": false,
+          "result": "     1→---\n     2→layer: L4_内容生产层\n     3→type: 活跃伏笔\n     4→last_synced: S1-1规划中\n     5→note: 续写默认只读这一份\n     6→---\n     7→\n     8→# 活跃伏笔\n     9→\n    10→> 当前正在推进、本季必须兑现的伏笔。\n    11→> AI续写默认只读这份，不读休眠和归档。\n    12→> 每条必须标注视角：[已知] / [未知] / [推演]\n    13→\n    14→---\n    15→\n    16→## 🔴 极紧急（第一季必须兑现）\n    17→\n    18→| ID | 伏笔 | 埋设场次 | 当前状态 | 预计回收 | 最后更新 | 视角 |\n    19→|----|------|---------|---------|---------|---------|------|\n    20→| S1-F-001 | 奥利弗（大当家）的真实身份和背景 | S1-1第二幕 | 首要情报目标，尚未接触 | S1中期 | S1-1规划 | [未知] |\n    21→| S1-F-002 | 俄军为什么要调查剃刀党 | S1-1第二幕 | 任务背景谜团，尚未揭露 | S2-S3 | S1-1规划 | [未知] |\n    22→| S1-F-003 | 剃刀党的真实目的和势力范围 | S1-1第二幕 | 世界观伏笔，尚未揭露 | S2-S3 | S1-1规划 | [未知] |\n    23→| S1-F-010 | 小蛋的卧底身份会不会暴露 | S1-1全场 | 持续悬念，身份尚未暴露 | 贯穿全剧 | S1-1规划 | [已知] |\n    24→\n    25→## 🟡 中期激活（近期可能触发）\n    26→\n    27→| ID | 伏笔 | 埋设场次 | 当前状态 | 预计回收 | 最后更新 | 视角 |\n    28→|----|------|---------|---------|---------|---------|------|\n    29→| S1-F-007 | 爱马仕的真实身份（只是改装商吗？） | S1-1场景1 | 物资供应商，深层身份待挖 | S2-S3 | S1-1规划 | [未知] |\n    30→| S1-F-008 | 黑市真正的老板是谁（皮特只是代理？） | S1-1场景2 | 皮特称\"老板不在\"，存疑 | S2-S3 | S1-1规划 | [未知] |\n    31→| S1-F-009 | 剃刀党总部的防守情况和内部结构 | S1-1场景4 | 位置已从皮特处获得，内部未知 | S2 | S1-1规划 | [未知] |\n    32→\n    33→## 🔵 长线伏笔（跨季，暂不急）\n    34→\n    35→| ID | 伏笔 | 埋设场次 | 当前状态 | 预计回收 | 最后更新 | 视角 |\n    36→|----|------|---------|---------|---------|---------|------|\n    37→| S1-F-004 | 史哥与小蛋的友谊线 | 重制版起点 | 尚未结识，等待S1初期触发 | S1初期 | S1-1规划 | [未知] |\n    38→| S1-F-005 | 二当家（约翰·谢尔比）的野心 | 重制版起点 | 潜伏中，尚未暴露 | S1末 | S1-1规划 | [未知] |\n    39→| S1-F-006 | 骷髅帮与山口组的关联 | S1-1场景1 | 骷髅帮成员已被消灭，山口组背景待揭 | S1中期 | S1-1规划 | [未知] |\n    40→\n    41→---\n    42→\n    43→> 休眠伏笔 → [[L4_内容生产层/休眠伏笔]]\n    44→> 已回收归档 → [[L4_内容生产层/已回收伏笔归档]]\n    45→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n"
+        }
+      ],
+      "isExpanded": false,
+      "result": "完美！现在我有了完整的信息。让我生成最终的综合报告。\n\n## Obsidian Vault 全面结构报告\n\n我已完整探索了这个 ARMA3-ZeusCut-Remastered Obsidian vault 的结构。以下是详细分析：\n\n---\n\n## 1. L层（L0-L6）文件列表及主要文件名\n\n### L0_导演作战台（导演控制中心）\n**主要文件：**\n- `00_导演控制台.md` - 每次开工的第一眼，显示当前位置、紧急事项、快速导航\n- `01_当前状态索引.md` - 全局状态快照\n- `02_本场任务入口.md` - 当前场次的核心目标、剧本链接、关键NPC\n- `03_下一场候选推进.md` - 候选推进方向\n- `工作流可视化.canvas` - 可视化工作流\n- `Pasted image 20260314090931.png` - 参考图片\n\n### L1_事实层（稳定事实源）\n**主要文件：**\n- `世界规则.md` - 世界观规则\n- `人物档案.md` - 角色稳定信息（身份、背景、特质）\n- `伏笔档案.md` - 伏笔定义与分类\n- `势力档案.md` - 组织/阵营信息\n- `地点档案.md` - 地点档案\n- `时间线.md` - 时间线\n- `伏笔档案可视化.canvas` - 可视化画布\n\n### L2_当前状态层（实时状态追踪）\n**主要文件：**\n- `主线支线推进状态.md` - 主线/支线进度\n- `人物当前状态.md` - 当前位置、关系、可用性等动态信息\n- `地点当前状态.md` - 地点当前情况\n- `组织关系当前状态.md` - 组织关系变化\n- `资源当前状态.md` - 资源库存\n- `未决事项.md` - 待处理事项\n\n### L3_方法论层（规范与指南）\n**主要文件：**\n- `导演手册.md` - 导演操作手册\n- `导演速查手册.md` - 快速参考\n- `单场剧本卡模板.md` - 场次剧本模板\n- `状态同步规范.md` - 同步流程规范（直播前/中/后的责任分工）\n- `失败分支方案.md` - 失败分支处理\n- `转折库.md` - 转折设计库\n- `AI提示词库.md` - AI续写提示词\n\n### L4_内容生产层（伏笔管理）\n**主要文件：**\n- `全局伏笔总表.md` - 所有伏笔总索引\n- `活跃伏笔.md` - 当前推进中的伏笔（续写AI默认只读此文件）\n- `休眠伏笔.md` - 暂未推进的伏笔\n- `已回收伏笔归档.md` - 已闭环的伏笔\n- `阶段压缩/` 目录及 `阶段压缩目录.md`\n\n### L5_场次工作区（执行层）\n**主要文件结构：**\n- `_模板_*.md` - 5个模板文件：直播偏差记录、单场摘要、状态变更单、导演复盘卡、伏笔推进记录\n- `原始仲裁材料/` - 剧情参考本（非事实层）\n- `S1/` - 第一季场次目录\n\n### L6_差异学习层（学习与总结）\n**主要文件：**\n- `导演技巧抽象.md` - 导演技巧总结\n- `成功模式库.md` - 成功案例沉淀\n- `失败模式库.md` - 失败案例分析\n- `差异案例/` - 具体案例目录\n\n---\n\n## 2. L5_场次工作区 的详细结构\n\n### 目录结构：\n```\nL5_场次工作区/\n├── _模板_直播偏差记录.md          # 直播中发生的意外事件记录\n├── _模板_单场摘要.md             # 事件流快照（承接或实际）\n├── _模板_状态变更单.md           # 人物/地点/组织/资源的变更明细表\n├── _模板_导演复盘卡.md           # 设计决策+踩坑点+可复用机制\n├── _模板_伏笔推进记录.md         # 伏笔新增/推进/回收记录\n├── 原始仲裁材料/\n│   ├── _说明.md                   # 参考本使用说明\n│   ├── 仲裁材料索引.md\n│   ├── 完整版剧情脚本.md\n│   ├── 活动任务.md\n│   ├── 情报文件.md\n│   └── 剃刀帮档案.md\n└── S1/\n    ├── S1-1/                      # 场次 1-1\n    │   ├── S1-1：《换皮》.md       # 完整剧本脚本\n    │   ├── 单场摘要.md\n    │   ├── 状态变更单.md\n    │   ├── 伏笔推进记录.md\n    │   ├── 导演复盘卡.md\n    │   └── 直播偏差记录.md\n    └── S1-2/                      # 场次 1-2\n        ├── S1-2：《投名状》.md\n        ├── 单场摘要.md\n        ├── 状态变更单.md\n        ├── 伏笔推进记录.md\n        ├── 导演复盘卡.md\n        └── 直播偏差记录.md\n```\n\n### 文件命名规律：\n- **主体剧本**：`S[季]-[集]：《标题》.md`\n- **执行类**：6个统一文件（不随场次变化）\n- **模板文件**：`_模板_[功能].md`\n- **目录**：按季（S1）→ 按集（S1-1、S1-2）组织\n\n---\n\n## 3. 一个场次文件夹（S1-1）内的文件\n\n**S1-1 完整文件清单：**\n1. `S1-1：《换皮》.md` - 完整剧本脚本（包含第一幕-第三幕事件）\n2. `单场摘要.md` - 本场开场冻结快照 + 事件流（按幕划分）\n3. `状态变更单.md` - 分类表格（人物、地点、组织关系、资源）\n4. `伏笔推进记录.md` - 新增伏笔、推进伏笔、回收伏笔分类\n5. `导演复盘卡.md` - 设计决策记录 + AI踩坑点（规划中还是空）\n6. `直播偏差记录.md` - 直播时的意外变化（规划中是空）\n\n---\n\n## 4. L0_导演作战台 的文件清单\n\n| 文件 | 功能 |\n|------|------|\n| `00_导演控制台.md` | 快速导航中枢（当前季度、场次、3件紧急事项） |\n| `01_当前状态索引.md` | 全局状态快照 |\n| `02_本场任务入口.md` | 当前场次的核心目标、关键NPC、承接状态 |\n| `03_下一场候选推进.md` | 下一场候选方向 |\n| `工作流可视化.canvas` | 工作流逻辑图 |\n\n---\n\n## 5. L2_当前状态层 的文件清单\n\n| 文件 | 内容 |\n|------|------|\n| `主线支线推进状态.md` | 故事进度追踪 |\n| `人物当前状态.md` | 主角团、支援NPC、敌对NPC的实时状态（表格形式） |\n| `地点当前状态.md` | 关键地点的当前状况 |\n| `组织关系当前状态.md` | 势力之间的关系 |\n| `资源当前状态.md` | 物资、金钱等资源库存 |\n| `未决事项.md` | 待处理任务列表 |\n\n---\n\n## 6. Markdown Frontmatter 结构示例\n\n### 示例 1：场次剧本（L5）\n```yaml\n---\nlayer: L5_场次工作区\ntype: 单场剧本\n场次: S1-1\n标题: 《换皮》\n执行状态: 规划中\nlast_updated: 2026-03-16\n---\n```\n\n### 示例 2：当前状态（L2）\n```yaml\n---\nlayer: L2_当前状态层\ntype: 人物当前状态\nlast_synced: 重制版S1前\n---\n```\n\n### 示例 3：人物档案（L1）\n```yaml\n---\nlayer: L1_事实层\ntype: 人物档案\nlast_updated: 2026-03-15\nsource: 完整版剧情脚本（重制版）\n---\n```\n\n### 示例 4：导演控制台（L0）\n```yaml\n---\nlayer: L0\ntype: 导演控制台\nlast_updated: 2026-03-14\n---\n```\n\n### 示例 5：单场摘要（L5）\n```yaml\n---\n场次: S1-1\n标题: 《换皮》\n时间线位置: 故事开始，超哥接受卧底任务后的第一天\n来源脚本: \"[[L5_场次工作区/S1/S1-1/S1-1：《换皮》]]\"\n执行状态: 规划中\n直播日期:\n偏差记录: \"[[L5_场次工作区/S1/S1-1/直播偏差记录]]\"\n---\n```\n\n### 示例 6：伏笔推进记录（L5）\n```yaml\n---\n场次: S1-1\n已同步全局伏笔总表: false\n---\n```\n\n### 示例 7：状态变更单（L5）\n```yaml\n---\n场次: S1-1\n来源脚本章节: 第一幕-第三幕\n已同步L2: false\n---\n```\n\n### 示例 8：活跃伏笔（L4）\n```yaml\n---\nlayer: L4_内容生产层\ntype: 活跃伏笔\nlast_synced: S1-1规划中\nnote: 续写默认只读这一份\n---\n```\n\n### 示例 9：导演复盘卡模板（L5）\n```yaml\n---\nlayer: L5_场次工作区\ntype: 导演复盘卡模板\n粒度: 集级（每集独立，放在 SX/SX-X/ 文件夹内）\n用途: 本集设计决策记录 + 踩坑点，供下一集编写时参考\n---\n```\n\n### 示例 10：规范文档（L3）\n```yaml\n---\nlayer: L3\ntype: 规范文档\nlast_updated: 2026-03-16\n---\n```\n\n---\n\n## 关键发现\n\n1. **分层设计**：L0-L6 从控制台→事实→状态→方法论→内容→执行→学习，形成完整的叙事管理生态\n\n2. **frontmatter 字段体系**：\n   - 跨层通用：`layer`, `type`, `last_updated`\n   - 场次特定：`场次`, `标题`, `执行状态`, `已同步*`\n   - 状态追踪：`last_synced`, `视角`（[已知]/[未知]/[推演]）\n\n3. **伏笔ID 体系**：`S[季]-F-[序号]`（如 S1-F-001），分类为\"极紧急\"\"中期激活\"\"长线\"\n\n4. **同步流程**：直播后 1 小时内填写偏差记录 → AI 回填 5 个场次文件 → 同步至 L2 → 更新 L6\n\n5. **对AI的友好设计**：L4 活跃伏笔标注 `note: 续写默认只读这一份`，明确AI读取边界\n\n文件路径均为绝对路径：\n- `/L0_导演作战台/`\n- `/L1_事实层/`\n- `/L2_当前状态层/`\n- `/L3_方法论层/`\n- `/L4_内容生产层/`\n- `/L5_场次工作区/S1/S1-1/` 等\n- `/L6_差异学习层/`"
+    }
+  }
+}

@@ -3,16 +3,17 @@
   "title": "Complete S1-2 episode",
   "titleGenerationStatus": "success",
   "createdAt": 1773734755334,
-  "updatedAt": 1773735086860,
-  "lastResponseAt": 1773735086860,
-  "sessionId": null,
+  "updatedAt": 1773735135380,
+  "lastResponseAt": 1773735135380,
+  "sessionId": "b5352681-3735-4871-bb39-61486c8d7d18",
+  "sdkSessionId": "b5352681-3735-4871-bb39-61486c8d7d18",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 734,
-    "cacheReadInputTokens": 48556,
+    "cacheCreationInputTokens": 3797,
+    "cacheReadInputTokens": 16428,
     "contextWindow": 200000,
-    "contextTokens": 49291,
-    "percentage": 25
+    "contextTokens": 20226,
+    "percentage": 10
   }
 }
