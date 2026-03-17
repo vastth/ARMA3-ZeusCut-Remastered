@@ -1,0 +1,39 @@
+{
+  "id": "conv-1773418527530-zbq7asvk0",
+  "title": "# ARMA3 导演知识库统一重构提示词",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773418527531,
+  "updatedAt": 1773420004647,
+  "lastResponseAt": 1773419720799,
+  "sessionId": "5ec8defd-665f-499a-be0f-89d4abf8fc9e",
+  "sdkSessionId": "5ec8defd-665f-499a-be0f-89d4abf8fc9e",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 258,
+    "cacheCreationInputTokens": 6036,
+    "cacheReadInputTokens": 54110,
+    "contextWindow": 200000,
+    "contextTokens": 60404,
+    "percentage": 30
+  },
+  "subagentData": {
+    "tooluse_rxIosxSBvNVbR6hhID9PrJ": {
+      "id": "tooluse_rxIosxSBvNVbR6hhID9PrJ",
+      "description": "Subagent task",
+      "prompt": "",
+      "status": "error",
+      "toolCalls": [],
+      "isExpanded": false,
+      "result": "<tool_use_error>InputValidationError: Agent failed due to the following issues:\nThe required parameter `description` is missing\nThe required parameter `prompt` is missing</tool_use_error>"
+    },
+    "tooluse_eEKtzpFKV3gRc97cfMPP6I": {
+      "id": "tooluse_eEKtzpFKV3gRc97cfMPP6I",
+      "description": "Subagent task",
+      "prompt": "",
+      "status": "error",
+      "toolCalls": [],
+      "isExpanded": false,
+      "result": "<tool_use_error>InputValidationError: Agent failed due to the following issues:\nThe required parameter `description` is missing\nThe required parameter `prompt` is missing</tool_use_error>"
+    }
+  }
+}

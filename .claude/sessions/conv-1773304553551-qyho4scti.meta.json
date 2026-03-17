@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773304553551-qyho4scti",
+  "title": "Organize current library content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1773304553553,
+  "updatedAt": 1773410422990,
+  "lastResponseAt": 1773410409158,
+  "sessionId": "5ed7ad40-ab80-4401-9f67-b81bd3228983",
+  "sdkSessionId": "5ed7ad40-ab80-4401-9f67-b81bd3228983",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 8616,
+    "cacheReadInputTokens": 13665,
+    "contextWindow": 200000,
+    "contextTokens": 22284,
+    "percentage": 11
+  }
+}

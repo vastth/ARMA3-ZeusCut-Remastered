@@ -1,0 +1,20 @@
+{
+  "id": "conv-1773496158321-yavhh03zs",
+  "title": "你现在要作为我的 **ARMA3 导演知识库架构师 + 上下文压缩系统设计师 + Obsidian ...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773496158322,
+  "updatedAt": 1773539694384,
+  "lastResponseAt": 1773496975586,
+  "sessionId": "2e6abe4e-8bb0-449d-900b-0df6b9c05572",
+  "sdkSessionId": "2e6abe4e-8bb0-449d-900b-0df6b9c05572",
+  "currentNote": "L0_导演作战台/任务脚本.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 1917,
+    "cacheCreationInputTokens": 2122,
+    "cacheReadInputTokens": 36208,
+    "contextWindow": 200000,
+    "contextTokens": 40247,
+    "percentage": 20
+  }
+}

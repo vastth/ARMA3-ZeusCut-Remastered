@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773581914691-9obkvhfay",
+  "title": "给我一些灵感，现在需要从 俄军基地开始 发展第一场 剧情",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773581914691,
+  "updatedAt": 1773663345034,
+  "lastResponseAt": 1773662339463,
+  "sessionId": "0a7ff345-cbc1-4d4e-bd57-7a3ee8b30dbc",
+  "sdkSessionId": "0a7ff345-cbc1-4d4e-bd57-7a3ee8b30dbc",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 790,
+    "cacheCreationInputTokens": 6937,
+    "cacheReadInputTokens": 19517,
+    "contextWindow": 200000,
+    "contextTokens": 27244,
+    "percentage": 14
+  }
+}

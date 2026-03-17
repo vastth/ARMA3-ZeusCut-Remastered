@@ -1,0 +1,43 @@
+{
+	"nodes":[
+		{"id":"56abc23456789012","type":"group","x":-100,"y":940,"width":1400,"height":350,"color":"#51cf66","label":"✅ 已兑现伏笔"},
+		{"id":"f67890123456abc1","type":"group","x":400,"y":-75,"width":400,"height":800,"color":"#ffd93d","label":"🟡 中期伏笔（S4应该兑现）"},
+		{"id":"0123456abc234567","type":"group","x":1040,"y":-50,"width":400,"height":650,"color":"#6bcfff","label":"🔵 长期伏笔（S5或更后期）"},
+		{"id":"b2c3d4e5f6789012","type":"group","x":-180,"y":-25,"width":400,"height":600,"color":"#ff6b6b","label":"🔴 短期伏笔（S3末必须兑现）"},
+		{"id":"a1b2c3d4e5f67890","type":"text","text":"# 伏笔档案可视化\n\n时间线与依赖关系图","x":350,"y":-240,"width":600,"height":80,"color":"6"},
+		{"id":"390123456abc2345","type":"text","text":"## M4: 黑手党的报复\n\n**埋设**: S2\n**关键NPC**: 小蛋、优雅哥\n**兑现**: 纽约黑帮派人报复","x":450,"y":425,"width":300,"height":120,"color":"#ffd93d"},
+		{"id":"90123456abc23456","type":"text","text":"## M5: 二当家的最终对决\n\n**埋设**: S1末\n**关键NPC**: 小蛋、二当家\n**兑现**: 直接对抗 / 政治博弈","x":450,"y":575,"width":300,"height":120,"color":"#ffd93d"},
+		{"id":"17890123456abc23","type":"text","text":"## M2: 白糖工厂重建\n\n**埋设**: S2\n**关键NPC**: 小蛋、新毒师\n**兑现**: 寻找新毒师、修复设备","x":450,"y":125,"width":300,"height":120,"color":"#ffd93d"},
+		{"id":"2890123456abc234","type":"text","text":"## M3: 山口组的后续行动\n\n**埋设**: S1\n**关键NPC**: 小蛋、山口组\n**兑现**: 山口组直接介入","x":450,"y":275,"width":300,"height":120,"color":"#ffd93d"},
+		{"id":"067890123456abc2","type":"text","text":"## M1: 威廉的画的财富之谜\n\n**埋设**: S2\n**关键NPC**: 小蛋、二当家\n**兑现**: 画中隐藏秘密被发现","x":450,"y":-25,"width":300,"height":120,"color":"#ffd93d"},
+		{"id":"c3d4e5f678901234","type":"text","text":"## S1: 阿青龙哥营救\n\n**埋设**: S3中期\n**关键NPC**: 切尔西、阿青、龙哥、lala\n**兑现方式**:\n- 直接营救\n- 谈判交换\n- 俄军介入","x":-130,"y":25,"width":300,"height":140,"color":"#ff6b6b"},
+		{"id":"d4e5f6789012345a","type":"text","text":"## S2: 油田控制权争夺\n\n**埋设**: S3中期\n**关键NPC**: 切尔西、小蛋、lala\n**兑现方式**:\n- 放弃油田换人质\n- 保油田失人质\n- 第三方介入","x":-130,"y":195,"width":300,"height":140,"color":"#ff6b6b"},
+		{"id":"e5f67890123456ab","type":"text","text":"## S3: 切尔西线终结\n\n**埋设**: S3中期\n**关键NPC**: 切尔西、小蛋\n**兑现方式**:\n- 直接对抗\n- 谈判\n- 第三方介入","x":-130,"y":365,"width":300,"height":140,"color":"#ff6b6b"},
+		{"id":"123456abc2345678","type":"text","text":"## L1: 凯勒·斯文的撤离\n\n**埋设**: 背景线\n**关键NPC**: 凯勒、lala、七海集团\n**兑现**: 凯勒撤离A岛","x":1090,"y":0,"width":300,"height":120,"color":"#6bcfff"},
+		{"id":"23456abc23456789","type":"text","text":"## L2: 民主党vs共和党最终对决\n\n**埋设**: S3\n**关键NPC**: 安东、共和党、小蛋\n**兑现**: 大规模战争 / 政治谈判","x":1090,"y":150,"width":300,"height":120,"color":"#6bcfff"},
+		{"id":"3456abc234567890","type":"text","text":"## L3: A岛的最终命运\n\n**埋设**: 背景线\n**关键NPC**: Black Sands、小蛋\n**兑现**: Black Sands直接介入","x":1090,"y":300,"width":300,"height":120,"color":"#6bcfff"},
+		{"id":"456abc2345678901","type":"text","text":"## L4: 小蛋的最终身份\n\n**埋设**: 全剧\n**关键NPC**: 小蛋\n**兑现**: 真实身份被揭露","x":1090,"y":450,"width":300,"height":120,"color":"#6bcfff"},
+		{"id":"6abc234567890123","type":"text","text":"✅1: 真正的二当家身份\n\n埋设: S1入会仪式\n兑现: S1中期","x":-50,"y":990,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"e23456789012345b","type":"text","text":"✅6: 史哥的牺牲\n\n埋设: S1末暗示\n兑现: S2末","x":-50,"y":1120,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"abc2345678901234","type":"text","text":"✅2: 警察腐败\n\n埋设: S1骷髅帮冲突\n兑现: S1中期","x":230,"y":990,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"f23456789012345c","type":"text","text":"✅7: 小蛋的继承\n\n埋设: 史哥临终托付\n兑现: S2末","x":230,"y":1120,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"bc23456789012345","type":"text","text":"✅3: 大当家的神秘性\n\n埋设: S1首次登场\n兑现: S1后期","x":510,"y":990,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"023456789012345d","type":"text","text":"✅8: 沙坦的真实意图\n\n埋设: S3初入古堡\n兑现: S3中期","x":510,"y":1120,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"c234567890123456","type":"text","text":"✅4: 二当家的野心\n\n埋设: S1多事件\n兑现: S1末","x":790,"y":990,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"123456789012345e","type":"text","text":"✅9: 俄军lala的身份\n\n埋设: S1飞鼠伏击\n兑现: S3中期","x":790,"y":1120,"width":250,"height":100,"color":"#51cf66"},
+		{"id":"d23456789012345a","type":"text","text":"✅5: 毒师的身份\n\n埋设: S2\n兑现: S2中期","x":1070,"y":990,"width":200,"height":100,"color":"#51cf66"}
+	],
+	"edges":[
+		{"id":"edge001","fromNode":"c3d4e5f678901234","fromSide":"right","toNode":"d4e5f6789012345a","toSide":"left","label":"人质与资源权衡"},
+		{"id":"edge002","fromNode":"d4e5f6789012345a","fromSide":"right","toNode":"e5f67890123456ab","toSide":"left","label":"导致终结"},
+		{"id":"edge003","fromNode":"e5f67890123456ab","fromSide":"right","toNode":"17890123456abc23","toSide":"left","label":"解决后重建"},
+		{"id":"edge004","fromNode":"067890123456abc2","fromSide":"bottom","toNode":"90123456abc23456","toSide":"top","label":"财富争夺"},
+		{"id":"edge005","fromNode":"90123456abc23456","fromSide":"right","toNode":"23456abc23456789","toSide":"left","label":"权力斗争升级"},
+		{"id":"edge006","fromNode":"2890123456abc234","fromSide":"right","toNode":"3456abc234567890","toSide":"left","label":"外部势力介入"},
+		{"id":"edge007","fromNode":"23456abc23456789","fromSide":"bottom","toNode":"3456abc234567890","toSide":"top","label":"政治博弈"},
+		{"id":"edge008","fromNode":"3456abc234567890","fromSide":"bottom","toNode":"456abc2345678901","toSide":"top","label":"最终揭秘"},
+		{"id":"edge009","fromNode":"c234567890123456","fromSide":"top","toNode":"90123456abc23456","toSide":"bottom","color":"#51cf66","label":"延续冲突"},
+		{"id":"edge010","fromNode":"d23456789012345a","fromSide":"top","toNode":"17890123456abc23","toSide":"bottom","color":"#51cf66","label":"需要新毒师"},
+		{"id":"edge011","fromNode":"e23456789012345b","fromSide":"top","toNode":"90123456abc23456","toSide":"bottom","color":"#51cf66","label":"权力真空"}
+	]
+}

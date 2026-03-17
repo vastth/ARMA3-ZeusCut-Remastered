@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"wf004d4e5f6789012","type":"group","x":1320,"y":-100,"width":550,"height":750,"color":"3","label":"L5 场次工作区"},
+		{"id":"wf006f67890123456","type":"group","x":400,"y":760,"width":450,"height":440,"color":"5","label":"L4 内容生产层"},
+		{"id":"wf007067890123456","type":"group","x":1045,"y":1220,"width":550,"height":300,"color":"6","label":"L3 方法论层"},
+		{"id":"wf003c3d4e5f67890","type":"group","x":400,"y":-100,"width":450,"height":360,"color":"2","label":"L2 当前状态层"},
+		{"id":"wf002b2c3d4e5f678","type":"group","x":-320,"y":-140,"width":450,"height":350,"color":"1","label":"L0 导演作战台"},
+		{"id":"wf005e5f678901234","type":"group","x":-320,"y":380,"width":450,"height":340,"color":"4","label":"L1 事实层"},
+		{"id":"wf008178901234567","type":"group","x":-320,"y":960,"width":450,"height":300,"color":"3","label":"L6 差异学习层"},
+		{"id":"wf01149012345678a","type":"text","text":"## 6个状态文件\n\n- 人物当前状态\n- 地点当前状态\n- 组织关系当前状态\n- 资源当前状态\n- 未决事项\n- 主线支线推进状态","x":450,"y":-50,"width":350,"height":260,"color":"2"},
+		{"id":"wf017af012345678ab","type":"text","text":"## 稳定档案\n\n- 人物档案\n- 势力档案\n- 地点档案\n- 世界规则\n- 时间线\n- 伏笔档案","x":-270,"y":430,"width":350,"height":250,"color":"4"},
+		{"id":"wf009289012345678","type":"text","text":"## 00_导演控制台\n\n当前状态快照","x":-270,"y":-90,"width":350,"height":100,"color":"1"},
+		{"id":"wf010390123456789","type":"text","text":"## 快速入口\n\n- 当前状态索引\n- 本场任务入口\n- 下一场候选推进","x":-270,"y":40,"width":350,"height":140,"color":"1"},
+		{"id":"wf0125a01234567890","type":"text","text":"## 原始任务脚本\n\n原文，仅作仲裁","x":1370,"y":-50,"width":450,"height":120,"color":"3"},
+		{"id":"wf0136b012345678ab","type":"text","text":"## 单场摘要\n\n事件流压缩","x":1370,"y":100,"width":450,"height":120,"color":"3"},
+		{"id":"wf0147c0123456789a","type":"text","text":"## 状态变更单\n\n世界状态变化","x":1370,"y":250,"width":450,"height":120,"color":"3"},
+		{"id":"wf0158d012345678ab","type":"text","text":"## 伏笔推进记录\n\n未闭环问题追踪","x":1370,"y":400,"width":450,"height":120,"color":"3"},
+		{"id":"wf020d0123456789ab","type":"text","text":"## 导演工具箱\n\n- 导演手册\n- 单场剧本卡模板\n- 转折库\n- 失败分支方案\n- AI提示词库","x":1095,"y":1270,"width":450,"height":200,"color":"6"},
+		{"id":"wf0169e0123456789a","type":"text","text":"## 导演复盘卡\n\n经验沉淀","x":1720,"y":1080,"width":450,"height":120,"color":"3"},
+		{"id":"wf021e012345678abc","type":"text","text":"## AI版本 vs 实际改稿\n\n- 差异案例索引\n- 成功模式库\n- 失败模式库\n- 导演技巧抽象","x":-270,"y":1010,"width":350,"height":200,"color":"3"},
+		{"id":"wf001a1b2c3d4e5f6","type":"text","text":"# ARMA3导演知识库工作流","x":450,"y":-360,"width":800,"height":100,"color":"6"},
+		{"id":"wf018b0123456789ab","type":"text","text":"## 全局伏笔总表\n\n所有未闭环伏笔的汇总索引","x":450,"y":810,"width":350,"height":100,"color":"5"},
+		{"id":"wf019c012345678abc","type":"text","text":"## 阶段压缩\n\n触发条件：\n- 剧情节点\n- 5场累计\n- 上下文压力","x":450,"y":940,"width":350,"height":220,"color":"5"}
+	],
+	"edges":[
+		{"id":"wfedge001","fromNode":"wf009289012345678","fromSide":"right","toNode":"wf01149012345678a","toSide":"left","label":"索引指向"},
+		{"id":"wfedge002","fromNode":"wf010390123456789","fromSide":"right","toNode":"wf0136b012345678ab","toSide":"left","label":"快速跳转"},
+		{"id":"wfedge003","fromNode":"wf0147c0123456789a","fromSide":"left","toNode":"wf01149012345678a","toSide":"right","color":"2","label":"同步更新"},
+		{"id":"wfedge004","fromNode":"wf0158d012345678ab","fromSide":"left","toNode":"wf018b0123456789ab","toSide":"right","color":"5","label":"同步"},
+		{"id":"wfedge005","fromNode":"wf0169e0123456789a","fromSide":"left","toNode":"wf021e012345678abc","toSide":"right","color":"3","label":"经验沉淀"},
+		{"id":"wfedge006","fromNode":"wf0136b012345678ab","fromSide":"bottom","toNode":"wf019c012345678abc","toSide":"top","color":"5","label":"阶段压缩"},
+		{"id":"wfedge007","fromNode":"wf019c012345678abc","fromSide":"top","toNode":"wf01149012345678a","toSide":"bottom","color":"2","label":"覆盖更新"},
+		{"id":"wfedge008","fromNode":"wf019c012345678abc","fromSide":"left","toNode":"wf021e012345678abc","toSide":"right","color":"3","label":"提炼模式"},
+		{"id":"wfedge009","fromNode":"wf017af012345678ab","fromSide":"right","toNode":"wf01149012345678a","toSide":"bottom","color":"4","label":"基础设定"},
+		{"id":"wfedge010","fromNode":"wf020d0123456789ab","fromSide":"top","toNode":"wf0125a01234567890","toSide":"bottom","color":"6","label":"方法指导"},
+		{"id":"wfedge013","fromNode":"wf0125a01234567890","fromSide":"bottom","toNode":"wf0136b012345678ab","toSide":"top","label":"压缩"},
+		{"id":"wfedge014","fromNode":"wf0136b012345678ab","fromSide":"bottom","toNode":"wf0147c0123456789a","toSide":"top","label":"提取状态"},
+		{"id":"wfedge015","fromNode":"wf0147c0123456789a","fromSide":"bottom","toNode":"wf0158d012345678ab","toSide":"top","label":"提取伏笔"},
+		{"id":"wfedge016","fromNode":"wf0158d012345678ab","fromSide":"bottom","toNode":"wf0169e0123456789a","toSide":"top","label":"复盘"}
+	]
+}

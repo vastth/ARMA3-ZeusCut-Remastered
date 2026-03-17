@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773421790447-jn4rpjpgd",
+  "title": "/claude-api",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773421790447,
+  "updatedAt": 1773422244712,
+  "lastResponseAt": 1773422008300,
+  "sessionId": "361b80d0-c60c-4a17-b36e-e9e892a62a59",
+  "sdkSessionId": "361b80d0-c60c-4a17-b36e-e9e892a62a59",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2511,
+    "cacheCreationInputTokens": 12946,
+    "cacheReadInputTokens": 102382,
+    "contextWindow": 200000,
+    "contextTokens": 117839,
+    "percentage": 59
+  }
+}

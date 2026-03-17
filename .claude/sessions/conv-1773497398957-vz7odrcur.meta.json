@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773497398957-vz7odrcur",
+  "title": "你刚才给出的方案已经有基础，但还不够适合作为我的最终导演知识库方案。",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773497398957,
+  "updatedAt": 1773539692921,
+  "lastResponseAt": 1773505245391,
+  "sessionId": "d82f871d-18cc-429e-8d1a-d5ace80c3829",
+  "sdkSessionId": "d82f871d-18cc-429e-8d1a-d5ace80c3829",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 490,
+    "cacheCreationInputTokens": 3977,
+    "cacheReadInputTokens": 42956,
+    "contextWindow": 200000,
+    "contextTokens": 47423,
+    "percentage": 24
+  }
+}

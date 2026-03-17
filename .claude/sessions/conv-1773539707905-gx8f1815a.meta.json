@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773539707905-gx8f1815a",
+  "title": "创建 canvas",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1773539707905,
+  "updatedAt": 1773556736233,
+  "lastResponseAt": 1773541786483,
+  "sessionId": "6ca93ad3-e349-48e1-9359-7396608b6b2c",
+  "sdkSessionId": "6ca93ad3-e349-48e1-9359-7396608b6b2c",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 39587,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 39587,
+    "percentage": 20
+  }
+}

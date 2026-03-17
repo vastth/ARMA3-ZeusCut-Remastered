@@ -1,0 +1,19 @@
+{
+  "id": "conv-1773410436375-mea6yjn3w",
+  "title": "Organize repository contents",
+  "titleGenerationStatus": "success",
+  "createdAt": 1773410436375,
+  "updatedAt": 1773413410628,
+  "lastResponseAt": 1773410470083,
+  "sessionId": "716424ab-4d5f-44d2-997f-d60a0af7bd84",
+  "sdkSessionId": "716424ab-4d5f-44d2-997f-d60a0af7bd84",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 7,
+    "cacheCreationInputTokens": 9532,
+    "cacheReadInputTokens": 20305,
+    "contextWindow": 200000,
+    "contextTokens": 29844,
+    "percentage": 15
+  }
+}
