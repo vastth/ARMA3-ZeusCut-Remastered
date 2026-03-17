@@ -3,6 +3,16 @@
   "title": "Complete S1-2 episode",
   "titleGenerationStatus": "success",
   "createdAt": 1773734755334,
-  "updatedAt": 1773734764071,
-  "sessionId": null
+  "updatedAt": 1773735086860,
+  "lastResponseAt": 1773735086860,
+  "sessionId": null,
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 734,
+    "cacheReadInputTokens": 48556,
+    "contextWindow": 200000,
+    "contextTokens": 49291,
+    "percentage": 25
+  }
 }
