@@ -3,18 +3,18 @@
   "title": "Integrate Dataview and Kanban plugins",
   "titleGenerationStatus": "success",
   "createdAt": 1773735219374,
-  "updatedAt": 1773738570436,
-  "lastResponseAt": 1773738570436,
+  "updatedAt": 1773738817145,
+  "lastResponseAt": 1773738817145,
   "sessionId": "e3a56505-eda4-4da1-80ab-f6a7c7b545e3",
   "sdkSessionId": "e3a56505-eda4-4da1-80ab-f6a7c7b545e3",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 1554,
-    "cacheReadInputTokens": 91666,
+    "cacheCreationInputTokens": 749,
+    "cacheReadInputTokens": 158924,
     "contextWindow": 200000,
-    "contextTokens": 93221,
-    "percentage": 47
+    "contextTokens": 159674,
+    "percentage": 80
   },
   "subagentData": {
     "toolu_01VZBz7jBsyFZnp2JAFvpNKP": {
