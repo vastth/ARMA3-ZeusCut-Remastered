@@ -1,0 +1,20 @@
+{
+  "quickadd:choice:6bdbb25a-d044-4116-b4af-b2806eb0fc95": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:new-tab": [],
+  "quickadd:choice:95d7bb6b-b712-461b-aa38-dbaf1554daf9": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "E"
+    }
+  ],
+  "markdown:toggle-preview": []
+}

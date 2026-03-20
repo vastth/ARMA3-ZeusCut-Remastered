@@ -1,5 +1,46 @@
 {
-  "choices": [],
+  "choices": [
+    {
+      "id": "6bdbb25a-d044-4116-b4af-b2806eb0fc95",
+      "name": "直播开始",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "直播开始",
+        "id": "c2a2ca49-83fc-49e8-813d-d32ee008f663",
+        "commands": [
+          {
+            "name": "直播开始",
+            "type": "UserScript",
+            "id": "876212c9-3edb-46fc-bfe6-b65d3185a81e",
+            "path": "L3_方法论层/QuickAdd脚本/直播开始.js",
+            "settings": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "95d7bb6b-b712-461b-aa38-dbaf1554daf9",
+      "name": "直播结束",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "直播结束",
+        "id": "c156839a-29cc-48c6-b833-a5828d4f423d",
+        "commands": [
+          {
+            "name": "直播结束",
+            "type": "UserScript",
+            "id": "bf93cce2-a4ff-48dc-839a-492e248bc160",
+            "path": "L3_方法论层/QuickAdd脚本/直播结束.js",
+            "settings": {}
+          }
+        ]
+      }
+    }
+  ],
   "inputPrompt": "single-line",
   "persistInputPromptDrafts": true,
   "useSelectionAsCaptureValue": true,
