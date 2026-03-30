@@ -3,18 +3,18 @@
   "title": "Revise S1-1 and S1-2 infiltration plot",
   "titleGenerationStatus": "success",
   "createdAt": 1773994380090,
-  "updatedAt": 1774200062586,
-  "lastResponseAt": 1774200062586,
+  "updatedAt": 1774864212085,
+  "lastResponseAt": 1774864212085,
   "sessionId": "66720ad3-d449-4b42-b808-3e7dd80fde62",
   "sdkSessionId": "66720ad3-d449-4b42-b808-3e7dd80fde62",
   "currentNote": "L5_场次工作区/S1/S1-1/S1-1：《换皮》.md",
   "usage": {
     "model": "sonnet",
-    "inputTokens": 1,
-    "cacheCreationInputTokens": 3808,
-    "cacheReadInputTokens": 65180,
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 40530,
+    "cacheReadInputTokens": 0,
     "contextWindow": 200000,
-    "contextTokens": 68989,
-    "percentage": 34
+    "contextTokens": 40533,
+    "percentage": 20
   }
 }
