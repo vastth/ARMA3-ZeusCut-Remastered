@@ -3,18 +3,18 @@
   "title": "Sync S1-1 and S1-2 broadcast completion status",
   "titleGenerationStatus": "success",
   "createdAt": 1774872096749,
-  "updatedAt": 1774873086392,
-  "lastResponseAt": 1774873086392,
+  "updatedAt": 1774873914275,
+  "lastResponseAt": 1774873914275,
   "sessionId": "5a18b2d0-caf0-4824-abd1-a15cd3dd2190",
   "sdkSessionId": "5a18b2d0-caf0-4824-abd1-a15cd3dd2190",
   "currentNote": "L5_场次工作区/S1/S1-3/S1-3：《清道夫》.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 578,
-    "cacheReadInputTokens": 93174,
+    "cacheCreationInputTokens": 3570,
+    "cacheReadInputTokens": 114688,
     "contextWindow": 200000,
-    "contextTokens": 93753,
-    "percentage": 47
+    "contextTokens": 118259,
+    "percentage": 59
   }
 }
