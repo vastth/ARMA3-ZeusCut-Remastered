@@ -3,18 +3,18 @@
   "title": "规划S1季集架构与编剧理论参考",
   "titleGenerationStatus": "success",
   "createdAt": 1775031192743,
-  "updatedAt": 1775031320251,
-  "lastResponseAt": 1775031320251,
+  "updatedAt": 1775036062497,
+  "lastResponseAt": 1775036062497,
   "sessionId": "dc6acef1-a8fa-4f85-a7ac-605fe412ccb9",
   "sdkSessionId": "dc6acef1-a8fa-4f85-a7ac-605fe412ccb9",
   "currentNote": "L5_场次工作区/原始仲裁材料/完整版剧情脚本.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 3624,
-    "cacheReadInputTokens": 38154,
+    "cacheCreationInputTokens": 602,
+    "cacheReadInputTokens": 49728,
     "contextWindow": 200000,
-    "contextTokens": 41779,
-    "percentage": 21
+    "contextTokens": 50331,
+    "percentage": 25
   }
 }
