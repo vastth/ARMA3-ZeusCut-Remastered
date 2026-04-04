@@ -1,0 +1,20 @@
+{
+  "id": "conv-1775294990314-qvdo5m9y1",
+  "title": "分析 S1-1~4 两小时直播的剧情密度",
+  "titleGenerationStatus": "success",
+  "createdAt": 1775294990314,
+  "updatedAt": 1775295324457,
+  "lastResponseAt": 1775295324457,
+  "sessionId": "417b486e-f3cd-49e5-8892-ff194c92ee23",
+  "sdkSessionId": "417b486e-f3cd-49e5-8892-ff194c92ee23",
+  "currentNote": "L1_事实层/伏笔档案.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 311,
+    "cacheReadInputTokens": 36931,
+    "contextWindow": 200000,
+    "contextTokens": 37243,
+    "percentage": 19
+  }
+}

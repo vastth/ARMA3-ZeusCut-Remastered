@@ -308,6 +308,7 @@ SORT 场次 ASC
 | 文件 | 内容 |
 |------|------|
 | `kanban-lessons.md` | Kanban 插件 4 类错误及正确写法 |
+| `../L3_方法论层/剧情密度规范.md` | 2小时单集密度上限、结构模板、NPC管理规则、AI续写强制检查项（基于S1-1至S1-4）|
 | `skills/scene-generator/SKILL.md` | 场次生成完整流程（含看板同步） |
 | `skills/kanban-dataview/SKILL.md` | Kanban+Dataview 5种构建模式 |
 | `skills/arma3-sync-audit/SKILL.md` | 库状态审核同步流程 |
