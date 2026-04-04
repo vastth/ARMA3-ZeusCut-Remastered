@@ -3,17 +3,18 @@
   "title": "规划S1季集架构与编剧理论参考",
   "titleGenerationStatus": "success",
   "createdAt": 1775031192743,
-  "updatedAt": 1775292255221,
-  "lastResponseAt": 1775292255221,
+  "updatedAt": 1775293214910,
+  "lastResponseAt": 1775292469967,
   "sessionId": "dc6acef1-a8fa-4f85-a7ac-605fe412ccb9",
   "sdkSessionId": "dc6acef1-a8fa-4f85-a7ac-605fe412ccb9",
   "usage": {
     "model": "sonnet",
-    "inputTokens": 1,
-    "cacheCreationInputTokens": 537,
-    "cacheReadInputTokens": 58931,
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 51941,
+    "cacheReadInputTokens": 12288,
     "contextWindow": 200000,
-    "contextTokens": 59469,
-    "percentage": 30
-  }
+    "contextTokens": 64232,
+    "percentage": 32
+  },
+  "resumeSessionAt": "0fca368a-18a2-4981-bdf0-48f63991d422"
 }

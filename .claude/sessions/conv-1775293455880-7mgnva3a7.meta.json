@@ -1,0 +1,20 @@
+{
+  "id": "conv-1775293455880-7mgnva3a7",
+  "title": "Build S1-6 episode structure",
+  "titleGenerationStatus": "success",
+  "createdAt": 1775293455880,
+  "updatedAt": 1775293592953,
+  "lastResponseAt": 1775293592953,
+  "sessionId": "cc502450-9ff1-4f0f-9e9a-999e500b2576",
+  "sdkSessionId": "cc502450-9ff1-4f0f-9e9a-999e500b2576",
+  "currentNote": "L5_场次工作区/S1/S1-5/S1-5：《开箱》.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 6070,
+    "cacheReadInputTokens": 35877,
+    "contextWindow": 200000,
+    "contextTokens": 41948,
+    "percentage": 21
+  }
+}
