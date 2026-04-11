@@ -3,17 +3,17 @@
   "title": "Build S1-6 episode structure",
   "titleGenerationStatus": "success",
   "createdAt": 1775293455880,
-  "updatedAt": 1775913016704,
-  "lastResponseAt": 1775913016704,
+  "updatedAt": 1775914383456,
+  "lastResponseAt": 1775914383456,
   "sessionId": "cc502450-9ff1-4f0f-9e9a-999e500b2576",
   "sdkSessionId": "cc502450-9ff1-4f0f-9e9a-999e500b2576",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 4153,
-    "cacheReadInputTokens": 68106,
+    "cacheCreationInputTokens": 5140,
+    "cacheReadInputTokens": 77815,
     "contextWindow": 200000,
-    "contextTokens": 72260,
-    "percentage": 36
+    "contextTokens": 82956,
+    "percentage": 41
   }
 }
