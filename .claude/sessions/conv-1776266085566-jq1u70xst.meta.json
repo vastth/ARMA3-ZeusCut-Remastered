@@ -3,18 +3,17 @@
   "title": "s1-8 已直播结束，小蛋 帮了 飞鼠的忙 拿下了 地鼠的港口，抢了共计400w 飞鼠承诺将分给小蛋...",
   "titleGenerationStatus": "failed",
   "createdAt": 1776266085566,
-  "updatedAt": 1776926036533,
-  "lastResponseAt": 1776926036533,
+  "updatedAt": 1777014767109,
+  "lastResponseAt": 1777014767109,
   "sessionId": "68b1dd8b-c998-4fc2-ab51-ecc9cc06bb4e",
   "sdkSessionId": "68b1dd8b-c998-4fc2-ab51-ecc9cc06bb4e",
-  "currentNote": "L5_场次工作区/S1/S1-8/S1-8：《废场》.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 1,
-    "cacheCreationInputTokens": 354,
-    "cacheReadInputTokens": 39318,
+    "cacheCreationInputTokens": 2668,
+    "cacheReadInputTokens": 18993,
     "contextWindow": 200000,
-    "contextTokens": 39673,
-    "percentage": 20
+    "contextTokens": 21662,
+    "percentage": 11
   }
 }
